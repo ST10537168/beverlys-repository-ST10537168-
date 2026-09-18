@@ -15,4 +15,10 @@ public class LoginRegistration {
                 && password.matches(".*[^a-zA-Z0-9].*");
     }
 
+    public static boolean checkCellPhoneNumber(String cellPhoneNumber) {
+        return cellPhoneNumber.startsWith("+27")
+                && cellPhoneNumber.length() <= 13
+                && cellPhoneNumber.substring(3).matches("[0-9]+");
+    }
+
 }
